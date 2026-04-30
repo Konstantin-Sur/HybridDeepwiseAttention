@@ -1,6 +1,6 @@
 # HybridDeepwiseAttention
 
-class HybridSparseAttention(nn.Module):
+'''class HybridSparseAttention(nn.Module):
     def __init__(self, channels, heads=4, compress_ratio=4, top_k_frac=0.25):
         super().__init__()
         assert channels % heads == 0
@@ -42,5 +42,4 @@ self.to_v = nn.Conv2d(channels, channels, 1, bias=False)
         out = torch.einsum("b i j, b d j -> b d i", attn_full, v_top)
         out = out.reshape(B, self.heads, self.dim, N).reshape(B, C, H, W)
         return self.out(out)
-
-я готовлюсь выпустить научную работу, и мне нужно чтобы ты сделал много официально верных тестов этого слоя по сравнению с baseline attention(БЕЗ conv2d!!! и всего остального, САМЫЙ ОБЫЧНЫЙ, ПОИЩИ КАК ЕГО ПРАВИЛЬНО НАПИСАТЬ), СЧИТАЙ FLOPS НЕ ТЕОРЕТИЧЕСКИ!!!!!!! А ТОЧНО ЗАМЕРЯЙ С ПОМОЩЬЮ БИБЛИОТЕК!!!!!!!, а также высказал что идея(ТОЧНО В ТАКОМ ИСПОЛНЕНИИ) нова или нет. ТЕСТЫ Я ЗАПУЩУ САМ, СДЕЛАЙ ИХ БЕЗ argparse(потому что я запускаю в google colab)
+'''
