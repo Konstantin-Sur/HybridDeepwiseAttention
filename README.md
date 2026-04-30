@@ -1,6 +1,6 @@
 # HybridDeepwiseAttention
 
-'''python
+```python
 class HybridSparseAttention(nn.Module):
     def __init__(self, channels, heads=4, compress_ratio=4, top_k_frac=0.25):
         super().__init__()
@@ -43,4 +43,4 @@ self.to_v = nn.Conv2d(channels, channels, 1, bias=False)
         out = torch.einsum("b i j, b d j -> b d i", attn_full, v_top)
         out = out.reshape(B, self.heads, self.dim, N).reshape(B, C, H, W)
         return self.out(out)
-'''
+```
