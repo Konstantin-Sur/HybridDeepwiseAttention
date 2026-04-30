@@ -1,6 +1,7 @@
 # HybridDeepwiseAttention
 
-'''class HybridSparseAttention(nn.Module):
+'''python
+class HybridSparseAttention(nn.Module):
     def __init__(self, channels, heads=4, compress_ratio=4, top_k_frac=0.25):
         super().__init__()
         assert channels % heads == 0
