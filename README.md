@@ -63,13 +63,13 @@ class AdaptiveCompressedAttention(nn.Module):
 |512|32|4|0.25|
 
 **Results (on google T4 used in google colab)**
-| Size       | Peak Memory (MB) | Time (ms) |
-|------------|------------------|-----------|
-| 64x64      | 64.53 MB         | 9.04 ms   |
-| 128x128    | 214.22 MB        | 11.94 ms  |
-| 256x256    | 880.50 MB        | 41.75 ms  |
-| 512x512    | 4625.64 MB       | 221.32 ms |
-| 1024x1024  | OOM              | N/A       |
+| Size         | Peak Memory (MB) | Time (ms) |
+|--------------|------------------|-----------|
+| 64x64        | 64.46 MB         | 8.73 ms   |
+| 128x128      | 213.21 MB        | 12.29 ms  |
+| 256x256      | 864.44 MB        | 40.47 ms  |
+| 512x512      | 4369.38 MB       | 206.89 ms |
+| 1024x1024    | OOM              | N/A       |
 
 
 
