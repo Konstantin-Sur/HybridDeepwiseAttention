@@ -52,3 +52,24 @@ class AdaptiveCompressedAttention(nn.Module):
         out = out.reshape(B, self.heads, self.dim, N).reshape(B, C, H, W)
         return self.out(out)
 ```
+
+***
+
+## Benchmark results for 'measure_memory_and_time.py'
+
+**Parameters:**
+|channels|compress_ratio|heads|top_k_frac|
+|-|-|-|-|
+|512|32|4|0.25|
+
+**Results (on google T4 used in google colab)**
+| Size       | Peak Memory (MB) | Time (ms) |
+|------------|------------------|-----------|
+| 64x64      | 64.53 MB         | 9.04 ms   |
+| 128x128    | 214.22 MB        | 11.94 ms  |
+| 256x256    | 880.50 MB        | 41.75 ms  |
+| 512x512    | 4625.64 MB       | 221.32 ms |
+| 1024x1024  | OOM              | N/A       |
+
+
+
