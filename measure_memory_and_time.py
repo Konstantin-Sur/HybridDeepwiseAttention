@@ -107,8 +107,8 @@ def test_memory_and_time():
     # Params
     channels = 512
     heads = 4
-    compress_ratio = 16
-    top_k_frac = 0.5
+    compress_ratio = 32
+    top_k_frac = 0.25
 
     model = AdaptiveCompressedAttention(
         channels=channels,
