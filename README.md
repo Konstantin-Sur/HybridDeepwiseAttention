@@ -71,7 +71,12 @@ class AdaptiveCompressedAttention(nn.Module):
 | 512x512      | 4369.38 MB       | 206.89 ms |
 | 1024x1024    | OOM              | N/A       |
 
-*For example, baseline attention with 512 dim, 4 heads and 512*512 seq size will require 1024GB or 1TB of memory*
+*For example, baseline attention with 512 dim, 4 heads and 512x512 seq size will require 1024GB or 1TB of memory*
 
+***
 
+## Results using ACA together with Resnet on Oxford Pets task.
+**Epoch 03 | val_acc=92.210% (best)**
+
+*You can reproduce results using google colab(T4 gpu) and oxford_pets.py code*
 
